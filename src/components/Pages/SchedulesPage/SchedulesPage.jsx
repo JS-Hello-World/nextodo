@@ -1,5 +1,6 @@
 'use client'
 
+import { TodoAddButton } from "@/components/TodoAddButton";
 import { TodoItem } from "@/components/TodoItem";
 import { TodoList } from "@/components/TodoList";
 import { styled } from "@mui/material";
@@ -28,8 +29,17 @@ export const SchedulesPage = () => {
           })
         }
       />
+      <TodoAddButtonWrapper>
+        <TodoAddButton></TodoAddButton>
+      </TodoAddButtonWrapper>
     </Wrapper>
   );
 };
 
 const Wrapper = styled('main')``;
+
+const TodoAddButtonWrapper = styled('div')`
+  position: fixed;
+  right: ${({ theme }) => theme.spacing(2)};
+  bottom: ${({ theme }) => theme.spacing(4)};
+`;
